@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+
+<script>
+    const hero = {
+        name: 'Bruce Wayne',
+        alias: 'Batman',
+        catchphrase: 'I am Batman!',
+        speak: function() {
+            return 'Attention!' + this.catchphrase;
+        },
+        attack: function() {
+            // return '(punches bad guy)' + sound;
+            return `(punches bad guy) ${sound}`;
+        }
+    };
+
+// access a property
+const thingToLookFor = 'alias';
+
+console.log(hero.name); //Bruce wayne
+console.log(hero['name']); //Bruce wayne
+console.log(hero[thingToLookFor]); //Batman
+
+// accessing methods (functions)
+console.log(hero.speak); // Lists the function as a value
+console.log(hero.speak()); // Attention I am Batman! (actually runs the function)
+console.log(hero.attack('BAM!')); // (punches bad guy) BAM!
+
+// calling a method on this string
+'this is my string'.toUpperCase(); // THIS IS MY STRING
+
+</script>
+
+
+</body>
+</html>

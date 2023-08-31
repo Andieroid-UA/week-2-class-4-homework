@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built In Objects</title>
+</head>
+<body>
+
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+
+<script>
+
+    //this is a string <-- still a primitive, tech not an object
+
+    const first = 'this is a string';
+    const second = new String('this is a string');
+//    console.log('this is a string'.toUpperCase());
+//    console.log(String('this is a string').toUpperCase);
+
+    //these are both strings, first and second, object version of string
+//    console.log(first === second);
+//===============================================================
+
+//What these built-in objects are and what can they do for us?
+
+//    console.groupCollapsed('Primitives vs Objects');
+//        console.log(first === second); //true
+//        console.log(
+//            typeof first,
+//            typeof String('this is a string'),
+//            typeof new String()
+//        );
+//    console.groupEnd();
+
+//    const sentence = 'this is my sentence';
+//    console.groupCollapsed('String');
+//        console.log(first.toUpperCase()); // This is a string
+//        console.log(first.toLowerCase()); // this is a string
+//        console.log(sentence.startsWith('this is')); // true
+//        console.log('🍻'.repeat(20)); //20 more beers!
+//        console.log('look at me goo    '.trim()); //cuts off
+//    console.groupEnd();
+//===============================================================
+
+//Numbers and MATH
+//console.group('Numbers and Math');
+//  console.log(1.toString()); //error
+//    console.log(1..toString()); //1
+//    console.log((1).toString()); //1
+//    console.log(Number.isInteger(5)); //true
+//    console.log(Number.isInteger(5.43)); //false
+//    console.log((1.562342).toFixed(2)); //1.56
+//    console.log(
+//        Math.random().toFixed(2), //random number
+//        Math.ceil(1.56), //2
+//        Math.floor(6.3), //6
+//    )
+//console.groupEnd();
+//===============================================================
+
+//Arrays
+const myArr = ['chris', 'nick', 'holly'];
+console.group('Arrays');
+    console.log(myArr.length); //3
+    console.log(myArr.join('-')); // chris-nick-holly
+    console.log(myArr.push('ado'), myArr); // chris-nick-holly-ado
+    console.log(myArr.pop(), myArr); // pops off last item in array, don't need to list
+
+// This is a function that takes in ANOTHER function
+// Looping those names over on the array. Functional because it's passing in a parameter
+myArr.forEach(function(user) {
+    console.log(user);
+});
+
+myArr.forEach((user) => console.log(user));
+console.groupEnd();
+</script>
+
+</body>
+</html>
